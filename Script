@@ -1,6 +1,6 @@
 #! /bin/bash
 yum -y install wget
-wget https://github.com/cng00006/Install-Packages/blob/master/packages.txt
+wget https://raw.githubusercontent.com/cng00006/Install-Packages/master/packages.txt
 for packages in $(cat packages.txt); do
   yum -y install $packages
 done
