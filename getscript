@@ -1,0 +1,5 @@
+#! /bin/bash
+yum -y install git
+git config --global user.name "cng0006"
+git config --global user.email "cng00006@seattlecentral.edu"
+git clone https://github.com/cng00006/Install-Packages.git
