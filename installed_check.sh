@@ -14,6 +14,7 @@ else
         esac
      done
 fi
+
 varnames=$(systemctl status $1 | grep Active | awk ‘{print$2}’)
 varnames2=“inactive”
 
