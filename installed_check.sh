@@ -13,16 +13,16 @@ else
             *)echo "Please answer Y or N"
         esac
      done
-fi
+     varnames=$(systemctl status $1 | grep Active | awk ‘{print$2}’)
+     varnames2=“inactive”
 
-varnames=$(systemctl status $1 | grep Active | awk ‘{print$2}’)
-varnames2=“inactive”
-
-If [ $varname == $varname2 ]; then
+     If [ $varname == $varname2 ]; then
 	while true; do
         read -p "Service inactive. Do you want to start this service?" yn
         case $yn in
             [Yn]* ) systemctl start $1; break;;
             [Nn]* ) exit;;
             *)echo "Please answer Y or N"
-fi            
+        esac
+     done
+fi
