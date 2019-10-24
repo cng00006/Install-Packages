@@ -17,7 +17,7 @@ else
      while true; do
         read -p "Service inactive. Do you want to start this service?" yn
         case $yn in
-            [Yn]* ) systemctl start $1; break;;
+            [Yy]* ) systemctl start $1; break;;
             [Nn]* ) exit;;
             *)echo "Please answer Y or N"
         esac
