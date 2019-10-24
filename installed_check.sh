@@ -8,7 +8,7 @@ else
     while true; do
         read -p "$1 not installed. Do you want to install this package?" yn
         case $yn in
-            [Yn]* ) yum -y install $1; break;;
+            [Yy]* ) yum -y install $1; break;;
             [Nn]* ) exit;;
             *)echo "Please answer Y or N"
         esac
